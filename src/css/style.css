@@ -130,6 +130,11 @@ p {
 }
 
 @media (max-width: 600px) {
+    .game {
+        height: 100%;
+        width: 100%;
+    }
+    
     #gameover {
         font-size: 60px;
         line-height: 50px;
