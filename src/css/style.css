@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#mensagem {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#gameover {
+    font-family: 'Irish Grover', cursive;
+    font-size: 110px;
+    line-height: 90px;
+}
+
+#reset {
+    cursor: pointer;
+    height: 80px;
+    width: 220px;
+    border: none;
+    background: rgb(26, 26, 26);
+    color: #fff;
+    border: 2px solid green;
+    font-family: 'Irish Grover', cursive;
+    font-size: 30px;
+}
+
+.game {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    border-bottom: 20px solid #00b400cb;
+    background: linear-gradient(to top, #fff, #e9b8ff);
+}
+
+#mario {
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+}
+
+.jump {
+    animation: pulo 1s linear infinite;
+}
+
+@keyframes pulo {
+    0% {
+        bottom: 20px;
+    }
+
+    40% {
+        bottom: 120px;
+    }
+
+    50% {
+        bottom: 120px;
+    }
+
+    60% {
+        bottom: 120px;
+    }
+
+    100% {
+        bottom: 20px;
+    }
+}
+
+#cano {
+    position: absolute;
+    width: 80px;
+    right: 0;
+    bottom: 0;
+    animation: andar 1.5s linear infinite;
+}
+
+@keyframes andar {
+    0% {
+        right: -80px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    font-family: 'Irish Grover', cursive;
+    color: #333;
+}
+
+#nuvens {
+    position: absolute;
+    width: 500px;
+    top: 0;
+    right: 0;
+    animation: nuvem 30s linear infinite;
+}
+
+@keyframes nuvem {
+    0% {
+        right: -500px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #gameover {
+        font-size: 60px;
+        line-height: 50px;
+    }
+
+    @keyframes pulo {
+        0% {
+            bottom: 40px;
+        }
+
+        40% {
+            bottom: 140px;
+        }
+
+        50% {
+            bottom: 140px;
+        }
+
+        60% {
+            bottom: 140px;
+        }
+
+        100% {
+            bottom: 40px;
+        }
+    }
+
+    .jump {
+        animation: pulo 1s linear infinite;
+    }
+
+    #reset {
+        height: 60px;
+        width: 180px;
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    #nuvens {
+        width: 400px;
+    }
+}
