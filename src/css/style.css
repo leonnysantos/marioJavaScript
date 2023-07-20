@@ -130,8 +130,12 @@ p {
 }
 
 @media (max-width: 600px) {
+    body {
+        background: #000;
+    }
+
     .game {
-        height: 95%;
+        height: 70%;
         width: 100%;
     }
     
